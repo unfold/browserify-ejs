@@ -1,0 +1,23 @@
+{
+  "name": "browserify-ejs",
+  "description": "Browserify transform plugin for EJS templates",
+  "author": "Simen Brekken <simen@unfold.no>",
+  "keywords": [
+    "browserify",
+    "ejs",
+    "transform"
+  ],
+  "version": "0.0.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unfold/browserify-ejs"
+  },
+  "engines": {
+    "node": ">= 0.8"
+  },
+  "dependencies": {
+    "through": "~2.2.6",
+    "ejs": "~0.8.3"
+  }
+}
