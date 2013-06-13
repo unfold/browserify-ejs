@@ -3,16 +3,20 @@ var ejs = require('ejs'),
 
 var filenamePattern = /\.(html|ejs)$/
 
+var wrap = function(template) {
+    return 'module.exports=(function() {var t = ' + template + '; return function(l) { return t(l) }}())'
+}
+
 module.exports = function(file) {
     if (!filenamePattern.test(file)) return through()
 
-    var template = ''
+    var input = ''
     var write = function(buffer) {
-        template += buffer
+        input += buffer
     }
 
     var end = function() {
-        this.queue('module.exports=' + ejs.compile(template, {client: true}))
+        this.queue(wrap(ejs.compile(input, {client: true, compileDebug: false})))
         this.queue(null)
     }
 

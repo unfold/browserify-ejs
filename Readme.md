@@ -15,7 +15,7 @@ Then browserify your module with the transform plugin:
 
 ## Installation
 
-  $ npm install ejs
+  $ npm install browserify-ejs
 
 ## License
 
