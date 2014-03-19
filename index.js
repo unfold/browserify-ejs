@@ -16,7 +16,7 @@ module.exports = function(file) {
     }
 
     var end = function() {
-        this.queue(wrap(ejs.compile(input, {client: true, compileDebug: false})))
+        this.queue(wrap(ejs.compile(input, {client: true, compileDebug: false, filename: file})))
         this.queue(null)
     }
 
