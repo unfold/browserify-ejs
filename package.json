@@ -17,7 +17,7 @@
     "node": ">= 0.8"
   },
   "dependencies": {
-    "through": "~2.2.7",
-    "ejs": "~0.8.4"
+    "through": "~2.3.4",
+    "ejs": "~1.0.0"
   }
 }
